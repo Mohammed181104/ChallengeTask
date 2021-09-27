@@ -16,6 +16,7 @@ public class Main {
         int randNum = random.nextInt(20) + 1;
         System.out.println(randNum);
         System.out.println("Guess a number from 1 to 20");
+        long startTime = System.currentTimeMillis()/1000;
         int guess = input.nextInt();
         int counter = 1;
         while (guess != randNum){
@@ -40,8 +41,11 @@ public class Main {
 
 
         }
+        long endTime = System.currentTimeMillis()/1000;
+
 
         System.out.println("Correct! It took you " + counter + " tries.");
+        System.out.println("It took you " + (endTime - startTime) + " seconds");
 
 
 
