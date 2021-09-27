@@ -14,9 +14,14 @@ public class Main {
         System.out.println("Guess a number from 1 to 20");
         int guess = input.nextInt();
         int counter = 1;
-        if (guess == randNum){
-            System.out.println("Correct! It took you " + counter + " tries.");
+        while (guess != randNum){
+            counter ++;
+            System.out.println("Try again:");
+            guess = input.nextInt();
         }
+
+        System.out.println("Correct! It took you " + counter + " tries.");
+
 
 
     }
